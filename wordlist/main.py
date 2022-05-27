@@ -10,15 +10,14 @@ def createwordlist(chrs , min_length , max_length , output):
     if(min_length > max_length):
         print("Wordlistgenerator : input error")
         sys.exit()
-    else:
-        pass
+
+    if os.path.exists(os.path.dirname(output)) == False:
+        os.mkdirs(os.path.dirname(outpu))
+
+
+
 
 
 if  __name__ == "__main__":
-    print("input max length")
-    maxl = int(input())
-    print("input min length")
-    minl = int(input())
-    chrs = None
-    output = ""
-    createwordlist(chrs , minl , maxl , output)
+    parser = argparse.ArgumentPraser()
+
